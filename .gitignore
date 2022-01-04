@@ -61,13 +61,8 @@ irb.log
 dump.rdb
 .rubocop-http*
 .irb_history
-ruby
 
 # Javascript
 node_modules
-javascript
-java
-
-python
 
 target
