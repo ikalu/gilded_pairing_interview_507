@@ -15,55 +15,9 @@ public class Inventory {
 
   public void updatePrice() {
     items.forEach(item -> {
-      if (item.name != "Fine Art" && item.name != "Concert Tickets") {
-        if (item.price > 0) {
-          if (item.name != "Gold Coins") {
-            item.price = item.price - 1;
-          }
-          if ("flowers".equalsIgnoreCase(item.name))
-            item.price -=1;
-        }
-      } else {
-        if (item.price < 50) {
-          item.price = item.price + 1;
-          if (item.name == "Concert Tickets") {
-            if (item.sellBy < 11) {
-              if (item.price < 50) {
-                item.price = item.price + 1;
-              }
-            }
-            if (item.sellBy < 6) {
-              if (item.price < 50) {
-                item.price = item.price + 1;
-              }
-            }
-          }
-        }
-      }
-      if (item.name != "Gold Coins") {
-        item.sellBy = item.sellBy - 1;
-      }
-      if (item.sellBy < 0) {
-        if (item.name != "Fine Art") {
-          if (item.name != "Concert Tickets") {
-            if (item.price > 0) {
-              if (item.name != "Gold Coins") {
-                item.price = item.price - 1;
-              }
+      ItemState itemState = ItemFactory.getItemState(item);
 
-              if ("flowers".equalsIgnoreCase(item.name))
-                item.price -=1;
-            }
-
-          } else {
-            item.price = item.price - item.price;
-          }
-        } else {
-          if (item.price < 50) {
-            item.price = item.price + 1;
-          }
-        }
-      }
+      itemState.track();
     });
   }
 
