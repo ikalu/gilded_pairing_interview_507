@@ -1,6 +1,6 @@
 package com.ivca.interviews;
 
-public class ConcertTickets implements ItemState {
+public class ConcertTickets implements ItemState, ItemPrice {
     private Inventory.Item item;
 
     public ConcertTickets(Inventory.Item item) {
@@ -12,11 +12,7 @@ public class ConcertTickets implements ItemState {
         raisePrice();
         reduceSellByByOne();
         if (hasConcertDayPassed())
-            reducePriceToZero();
-    }
-
-    private void reducePriceToZero() {
-        item.price = 0;
+            setMinimumPrice(item);
     }
 
     private boolean hasConcertDayPassed() {

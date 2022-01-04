@@ -14,11 +14,22 @@ public class Inventory {
   }
 
   public void updatePrice() {
-    items.forEach(item -> {
-      ItemState itemState = ItemFactory.getItemState(item);
+    try {
+      items.forEach(item -> {
+        ItemState itemState = ItemFactory.getItemState(item);
+        itemState.track();
 
-      itemState.track();
-    });
+        ItemPrice itemPrice = ItemFactory.getItemPrice(item);
+        if (itemPrice.isLessThanMinimumPrice(item))
+          itemPrice.setMinimumPrice(item);
+        else if (itemPrice.isMoreThanMaximumPrice(item))
+          itemPrice.setMaximumPrice(item);
+
+      });
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
+
   }
 
 

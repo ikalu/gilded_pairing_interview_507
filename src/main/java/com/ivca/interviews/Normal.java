@@ -1,6 +1,6 @@
 package com.ivca.interviews;
 
-public class Normal implements ItemState {
+public class Normal implements ItemState, ItemPrice {
     private Inventory.Item item;
 
     public Normal(Inventory.Item item) {

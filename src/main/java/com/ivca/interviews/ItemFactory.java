@@ -22,4 +22,16 @@ public class ItemFactory {
         }
         return null;
     }
+
+    public static ItemPrice getItemPrice(Inventory.Item item) {
+        //Using Java Reflection API
+        try {
+            return (ItemPrice) Class.forName(REGISTERED_ITEMS.get(item.name.toUpperCase()))
+                    .getDeclaredConstructor(Inventory.Item.class)
+                    .newInstance(item);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 }

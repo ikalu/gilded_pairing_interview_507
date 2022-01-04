@@ -1,6 +1,6 @@
 package com.ivca.interviews;
 
-public class FineArt implements ItemState {
+public class FineArt implements ItemState, ItemPrice {
     private Inventory.Item item;
 
     public FineArt(Inventory.Item item) {

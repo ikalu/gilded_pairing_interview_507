@@ -1,6 +1,6 @@
 package com.ivca.interviews;
 
-public class Flowers implements ItemState {
+public class Flowers implements ItemState, ItemPrice {
     private Inventory.Item item;
 
     public Flowers(Inventory.Item item) {
