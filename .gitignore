@@ -36,6 +36,7 @@ java/build
 java/.gradle
 python/venv
 python/__pycache__
+*.iml
 
 # Dotenv config
 .env\.*
@@ -60,6 +61,11 @@ irb.log
 dump.rdb
 .rubocop-http*
 .irb_history
+ruby
 
 # Javascript
 node_modules
+javascript
+java
+
+python
