@@ -14,9 +14,6 @@ public class Flowers implements ItemState, ItemPrice {
 
         if (isPastSellBy())
             reducePrice();
-
-        if (isPriceLessThanMin())
-            adjustPrice();
     }
 
     private boolean isPastSellBy() {
@@ -31,11 +28,4 @@ public class Flowers implements ItemState, ItemPrice {
         item.sellBy -=1;
     }
 
-    private boolean isPriceLessThanMin() {
-        return item.price < 0;
-    }
-
-    private void adjustPrice() {
-        item.price = 0;
-    }
 }

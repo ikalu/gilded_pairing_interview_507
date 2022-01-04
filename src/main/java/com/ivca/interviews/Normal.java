@@ -14,9 +14,6 @@ public class Normal implements ItemState, ItemPrice {
 
         if (isPastSellBy())
             reducePrice();
-
-        if (isPriceLessThanMin())
-            adjustPrice();
     }
 
     private boolean isPastSellBy() {
@@ -29,13 +26,5 @@ public class Normal implements ItemState, ItemPrice {
 
     private void reduceSellByByOne() {
         item.sellBy -=1;
-    }
-
-    private boolean isPriceLessThanMin() {
-        return item.price < 0;
-    }
-
-    private void adjustPrice() {
-        item.price = 0;
     }
 }

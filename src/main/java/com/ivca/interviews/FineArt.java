@@ -11,16 +11,6 @@ public class FineArt implements ItemState, ItemPrice {
     public void track() {
         raisePrice();
         reduceSellByByOne();
-        if (isPriceGreaterThanMax())
-            adjustPrice();
-    }
-
-    private boolean isPriceGreaterThanMax() {
-        return item.price > 50;
-    }
-
-    private void adjustPrice() {
-        item.price = 50;
     }
 
     private void raisePrice() {
