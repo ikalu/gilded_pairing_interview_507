@@ -19,9 +19,9 @@ class InventoryTest {
         inventory.updatePrice();
         Inventory.Item finalItemState = inventory.getItems().get(0);
 
-        assertEquals(finalItemState.name, "normal");
-        assertEquals(finalItemState.sellBy, 49);
-        assertEquals(finalItemState.price, 49);
+        assertEquals("normal", finalItemState.name);
+        assertEquals(49, finalItemState.sellBy);
+        assertEquals(49,finalItemState.price);
         /*assertThat(finalItemState.name).isEqualTo("normal");
         assertThat(finalItemState.sellBy).isEqualTo(49);
         assertThat(finalItemState.price).isEqualTo(49);*/
@@ -34,9 +34,9 @@ class InventoryTest {
         inventory.updatePrice();
         Inventory.Item finalItemState = inventory.getItems().get(0);
 
-        assertEquals(finalItemState.name, "normal");
-        assertEquals(finalItemState.sellBy, -1);
-        assertEquals(finalItemState.price, 48);
+        assertEquals("normal", finalItemState.name);
+        assertEquals(-1, finalItemState.sellBy);
+        assertEquals(48,finalItemState.price);
 
         /*assertThat(finalItemState.name).isEqualTo("normal");
         assertThat(finalItemState.sellBy).isEqualTo(-1);
@@ -50,9 +50,9 @@ class InventoryTest {
         inventory.updatePrice();
         Inventory.Item finalItemState = inventory.getItems().get(0);
 
-        assertEquals(finalItemState.name, "normal");
-        assertEquals(finalItemState.sellBy, -1);
-        assertEquals(finalItemState.price, 0);
+        assertEquals("normal", finalItemState.name);
+        assertEquals(-1, finalItemState.sellBy);
+        assertEquals(0,finalItemState.price);
 
         /*assertThat(finalItemState.name).isEqualTo("normal");
         assertThat(finalItemState.sellBy).isEqualTo(-1);
@@ -66,9 +66,9 @@ class InventoryTest {
         inventory.updatePrice();
         Inventory.Item finalItemState = inventory.getItems().get(0);
 
-        assertEquals(finalItemState.name, "Fine Art");
-        assertEquals(finalItemState.sellBy, 49);
-        assertEquals(finalItemState.price, 41);
+        assertEquals("Fine Art", finalItemState.name);
+        assertEquals(49, finalItemState.sellBy);
+        assertEquals(41,finalItemState.price);
 
         /*assertThat(finalItemState.name).isEqualTo("Fine Art");
         assertThat(finalItemState.sellBy).isEqualTo(49);
@@ -82,9 +82,9 @@ class InventoryTest {
         inventory.updatePrice();
         Inventory.Item finalItemState = inventory.getItems().get(0);
 
-        assertEquals(finalItemState.name, "Fine Art");
-        assertEquals(finalItemState.sellBy, 9);
-        assertEquals(finalItemState.price, 50);
+        assertEquals("Fine Art", finalItemState.name);
+        assertEquals(9, finalItemState.sellBy);
+        assertEquals(50,finalItemState.price);
 
         /*assertThat(finalItemState.name).isEqualTo("Fine Art");
         assertThat(finalItemState.sellBy).isEqualTo(9);
@@ -98,9 +98,9 @@ class InventoryTest {
         inventory.updatePrice();
         Inventory.Item finalItemState = inventory.getItems().get(0);
 
-        assertEquals(finalItemState.name, "Gold Coins");
-        assertEquals(finalItemState.sellBy, 10);
-        assertEquals(finalItemState.price, 10);
+        assertEquals("Gold Coins", finalItemState.name);
+        assertEquals(10, finalItemState.sellBy);
+        assertEquals(10,finalItemState.price);
 
         /*assertThat(finalItemState.name).isEqualTo("Gold Coins");
         assertThat(finalItemState.sellBy).isEqualTo(10);
@@ -114,9 +114,9 @@ class InventoryTest {
         inventory.updatePrice();
         Inventory.Item finalItemState = inventory.getItems().get(0);
 
-        assertEquals(finalItemState.name, "Concert Tickets");
-        assertEquals(finalItemState.sellBy, 10);
-        assertEquals(finalItemState.price, 11);
+        assertEquals("Concert Tickets", finalItemState.name);
+        assertEquals(10, finalItemState.sellBy);
+        assertEquals(11,finalItemState.price);
 
         /*assertThat(finalItemState.name).isEqualTo("Concert Tickets");
         assertThat(finalItemState.sellBy).isEqualTo(10);
@@ -130,9 +130,9 @@ class InventoryTest {
         inventory.updatePrice();
         Inventory.Item finalItemState = inventory.getItems().get(0);
 
-        assertEquals(finalItemState.name, "Concert Tickets");
-        assertEquals(finalItemState.sellBy, 9);
-        assertEquals(finalItemState.price, 12);
+        assertEquals("Concert Tickets", finalItemState.name);
+        assertEquals(9, finalItemState.sellBy);
+        assertEquals(12,finalItemState.price);
 
         /*assertThat(finalItemState.name).isEqualTo("Concert Tickets");
         assertThat(finalItemState.sellBy).isEqualTo(9);
@@ -146,9 +146,9 @@ class InventoryTest {
         inventory.updatePrice();
         Inventory.Item finalItemState = inventory.getItems().get(0);
 
-        assertEquals(finalItemState.name, "Concert Tickets");
-        assertEquals(finalItemState.sellBy, 4);
-        assertEquals(finalItemState.price, 13);
+        assertEquals("Concert Tickets", finalItemState.name);
+        assertEquals(4, finalItemState.sellBy);
+        assertEquals(13,finalItemState.price);
 
         /*assertThat(finalItemState.name).isEqualTo("Concert Tickets");
         assertThat(finalItemState.sellBy).isEqualTo(4);
@@ -162,9 +162,9 @@ class InventoryTest {
         inventory.updatePrice();
         Inventory.Item finalItemState = inventory.getItems().get(0);
 
-        assertEquals(finalItemState.name, "Concert Tickets");
-        assertEquals(finalItemState.sellBy, -1);
-        assertEquals(finalItemState.price, 0);
+        assertEquals("Concert Tickets", finalItemState.name);
+        assertEquals(-1, finalItemState.sellBy);
+        assertEquals(0,finalItemState.price);
 
         /*assertThat(finalItemState.name).isEqualTo("Concert Tickets");
         assertThat(finalItemState.sellBy).isEqualTo(-1);
@@ -178,9 +178,9 @@ class InventoryTest {
         inventory.updatePrice();
         Inventory.Item finalItemState = inventory.getItems().get(0);
 
-        assertEquals(finalItemState.name, "Gold Coins");
-        assertEquals(finalItemState.sellBy, 10);
-        assertEquals(finalItemState.price, 80);
+        assertEquals("Gold Coins", finalItemState.name);
+        assertEquals(10, finalItemState.sellBy);
+        assertEquals(80, finalItemState.price);
 
         /*assertThat(finalItemState.name).isEqualTo("Gold Coins");
         assertThat(finalItemState.sellBy).isEqualTo(10);
@@ -209,9 +209,9 @@ class InventoryTest {
         inventory.updatePrice();
         Inventory.Item finalItemState = inventory.getItems().get(0);
 
-        assertEquals(finalItemState.name, "flowers");
-        assertEquals(finalItemState.sellBy, -1);
-        assertEquals(finalItemState.price, 46);
+        assertEquals("flowers",finalItemState.name);
+        assertEquals(-1, finalItemState.sellBy);
+        assertEquals(46,finalItemState.price);
 
     }
 
@@ -222,9 +222,9 @@ class InventoryTest {
         inventory.updatePrice();
         Inventory.Item finalItemState = inventory.getItems().get(0);
 
-        assertEquals(finalItemState.name, "flowers");
-        assertEquals(finalItemState.sellBy, -1);
-        assertEquals(finalItemState.price, 0);
+        assertEquals("flowers",finalItemState.name);
+        assertEquals(-1, finalItemState.sellBy);
+        assertEquals(0,finalItemState.price);
 
     }
 }
