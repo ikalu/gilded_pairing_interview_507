@@ -9,7 +9,13 @@ public class ConcertTickets implements ItemState, ItemPrice {
 
     @Override
     public void track() {
-        raisePrice();
+        raisePriceByOne();
+        if (sellByIsLessThan(11))
+            raisePriceByOne();
+
+        if (sellByIsLessThan(6))
+            raisePriceByOne();
+
         reduceSellByByOne();
         if (hasConcertDayPassed())
             setMinimumPrice(item);
@@ -19,13 +25,8 @@ public class ConcertTickets implements ItemState, ItemPrice {
         return item.sellBy < 0;
     }
 
-    private void raisePrice() {
+    private void raisePriceByOne() {
         item.price +=1;
-        if (sellByIsLessThan(11))
-            item.price +=1;
-
-        if (sellByIsLessThan(6))
-            item.price +=1;
     }
 
     private boolean sellByIsLessThan(int days) {
